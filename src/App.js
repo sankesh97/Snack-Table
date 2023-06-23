@@ -96,7 +96,7 @@ function App() {
             .filter((snack) =>
               searchData
                 ? snack.product_name.toLowerCase().includes(searchData) ||
-                  snack.ingredients.includes(searchData)
+                  snack.ingredients.toString().includes(searchData)
                 : true
             )
             .sort((One, Two) =>
